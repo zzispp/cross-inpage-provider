@@ -4,36 +4,36 @@ import {
   checkWalletSwitchEnable,
   defineWindowProperty,
   JsBridgeBase,
-} from '@onekeyfe/cross-inpage-provider-core';
-import { ProviderAlgo } from '@onekeyfe/onekey-algo-provider';
-import { ProviderAlph, registerAlephiumProvider } from '@onekeyfe/onekey-alph-provider';
+} from '@zzispp/cross-inpage-provider-core';
+import { ProviderAlgo } from '@zzispp/onekey-algo-provider';
+import { ProviderAlph, registerAlephiumProvider } from '@zzispp/onekey-alph-provider';
 import {
   ProviderAptos,
   ProviderAptosMartian,
   registerAptosWallet,
-} from '@onekeyfe/onekey-aptos-provider';
-import { ProviderBfc, registerBfcWallet } from '@onekeyfe/onekey-bfc-provider';
-import { ProviderBtc, ProviderBtcWallet } from '@onekeyfe/onekey-btc-provider';
-import { defineWindowCardanoProperty, ProviderCardano } from '@onekeyfe/onekey-cardano-provider';
-import { ProviderConflux } from '@onekeyfe/onekey-conflux-provider';
-import { BBNProviderCosmos, ProviderCosmos } from '@onekeyfe/onekey-cosmos-provider';
+} from '@zzispp/onekey-aptos-provider';
+import { ProviderBfc, registerBfcWallet } from '@zzispp/onekey-bfc-provider';
+import { ProviderBtc, ProviderBtcWallet } from '@zzispp/onekey-btc-provider';
+import { defineWindowCardanoProperty, ProviderCardano } from '@zzispp/onekey-cardano-provider';
+import { ProviderConflux } from '@zzispp/onekey-conflux-provider';
+import { BBNProviderCosmos, ProviderCosmos } from '@zzispp/onekey-cosmos-provider';
 import {
   METAMASK_UUID,
   MetaMaskSDK,
   ProviderEthereum,
   registerEIP6963Provider,
   shimWeb3,
-} from '@onekeyfe/onekey-eth-provider';
-import { emitNeoReadyEvent, NEOLineN3, ProviderNeo } from '@onekeyfe/onekey-neo-provider';
-import { ProviderNostr } from '@onekeyfe/onekey-nostr-provider';
-import { ProviderPolkadot, registerPolkadot } from '@onekeyfe/onekey-polkadot-provider';
-import { ProviderPrivate } from '@onekeyfe/onekey-private-provider';
-import { ProviderScdo } from '@onekeyfe/onekey-scdo-provider';
-import { ProviderSolana, registerSolanaWallet, WalletIcon } from '@onekeyfe/onekey-solana-provider';
-import { ProviderSui, registerSuiWallet } from '@onekeyfe/onekey-sui-provider';
-import { createTonProviderOpenMask, ProviderTon } from '@onekeyfe/onekey-ton-provider';
-import { ProviderTron } from '@onekeyfe/onekey-tron-provider';
-import { ProviderWebln } from '@onekeyfe/onekey-webln-provider';
+} from '@zzispp/onekey-eth-provider';
+import { emitNeoReadyEvent, NEOLineN3, ProviderNeo } from '@zzispp/onekey-neo-provider';
+import { ProviderNostr } from '@zzispp/onekey-nostr-provider';
+import { ProviderPolkadot, registerPolkadot } from '@zzispp/onekey-polkadot-provider';
+import { ProviderPrivate } from '@zzispp/onekey-private-provider';
+import { ProviderScdo } from '@zzispp/onekey-scdo-provider';
+import { ProviderSolana, registerSolanaWallet, WalletIcon } from '@zzispp/onekey-solana-provider';
+import { ProviderSui, registerSuiWallet } from '@zzispp/onekey-sui-provider';
+import { createTonProviderOpenMask, ProviderTon } from '@zzispp/onekey-ton-provider';
+import { ProviderTron } from '@zzispp/onekey-tron-provider';
+import { ProviderWebln } from '@zzispp/onekey-webln-provider';
 import builtInPerpInjected from './builtInPerpInjected';
 import { hackAllConnectButtons } from './connectButtonHack';
 import { WALLET_CONNECT_INFO } from './connectButtonHack/consts';

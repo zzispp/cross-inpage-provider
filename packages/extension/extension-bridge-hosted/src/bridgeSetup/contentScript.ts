@@ -3,14 +3,14 @@ import {
   isLegacyExtMessage,
   appDebugLogger,
   injectedFactory,
-} from '@onekeyfe/cross-inpage-provider-core';
+} from '@zzispp/cross-inpage-provider-core';
 import {
   IPostMessageEventData,
   IOptionsWithDebugLogger,
-} from '@onekeyfe/cross-inpage-provider-types';
+} from '@zzispp/cross-inpage-provider-types';
 
 import messagePort from '../extensionMessagePort';
-import { commonLogger } from '@onekeyfe/cross-inpage-provider-core';
+import { commonLogger } from '@zzispp/cross-inpage-provider-core';
 
 const { EXT_PORT_CS_TO_BG, JS_BRIDGE_MESSAGE_DIRECTION, JS_BRIDGE_MESSAGE_EXT_CHANNEL } = consts;
 

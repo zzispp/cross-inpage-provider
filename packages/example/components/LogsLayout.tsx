@@ -2,7 +2,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Console, Hook, Unhook } from 'console-feed';
-import { JsBridgeBase } from '@onekeyfe/cross-inpage-provider-core';
+import { JsBridgeBase } from '@zzispp/cross-inpage-provider-core';
 import { isString } from 'lodash';
 import { Button } from './ui/button';
 import { Checkbox } from './ui/checkbox';

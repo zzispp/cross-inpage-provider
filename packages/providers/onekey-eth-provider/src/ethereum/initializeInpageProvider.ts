@@ -1,4 +1,4 @@
-import { JsBridgeBase } from '@onekeyfe/cross-inpage-provider-core';
+import { JsBridgeBase } from '@zzispp/cross-inpage-provider-core';
 
 import MetaMaskInpageProvider, {
   MetaMaskInpageProviderOptions,

@@ -1,5 +1,5 @@
-import { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
+import { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
 import { ProviderAptosBase } from './ProviderAptosBase';
 import type {
   AptosAccountInfo,
@@ -11,8 +11,8 @@ import type {
   SignMessageResponseCompatible,
 } from './types';
 import type * as TypeUtils from './type-utils';
-import { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
-import { web3Errors } from '@onekeyfe/cross-inpage-provider-errors';
+import { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
+import { web3Errors } from '@zzispp/cross-inpage-provider-errors';
 import type { Types } from 'aptos';
 import type { AccountAuthenticator, PendingTransactionResponse } from '@aptos-labs/ts-sdk';
 import {

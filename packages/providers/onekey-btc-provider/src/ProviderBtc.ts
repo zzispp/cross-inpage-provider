@@ -1,6 +1,6 @@
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
-import { ConsoleLike } from '@onekeyfe/cross-inpage-provider-types';
-import { web3Errors } from '@onekeyfe/cross-inpage-provider-errors';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
+import { ConsoleLike } from '@zzispp/cross-inpage-provider-types';
+import { web3Errors } from '@zzispp/cross-inpage-provider-errors';
 
 import { ProviderBtcBase } from './ProviderBtcBase';
 import {

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { IJsBridgeMessagePayload, IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import { IJsBridgeMessagePayload, IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 import { JsBridgeBase } from './JsBridgeBase';
 import { consoleErrorInDev } from './loggers';
 import { ProviderBase } from './ProviderBase';

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/restrict-plus-operands,@typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { JsBridgeIframe } from '@onekeyfe/cross-inpage-provider-core';
-import { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import { JsBridgeIframe } from '@zzispp/cross-inpage-provider-core';
+import { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 import { sendMethod } from './utils';
 import { Button } from '../../ui/button';
 

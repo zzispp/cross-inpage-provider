@@ -24,7 +24,7 @@ import {
   type InputMultiSigData,
   AccountAddressInput,
 } from '@aptos-labs/ts-sdk';
-import { hexToBytes, bytesToHex } from '@onekeyfe/cross-inpage-provider-core';
+import { hexToBytes, bytesToHex } from '@zzispp/cross-inpage-provider-core';
 import type { Types } from 'aptos';
 
 export enum TransactionPayloadType {

@@ -1,4 +1,4 @@
-import { commonLogger } from '@onekeyfe/cross-inpage-provider-core';
+import { commonLogger } from '@zzispp/cross-inpage-provider-core';
 
 function getOriginFromPort(port: chrome.runtime.Port, { skipError }: { skipError?: boolean } = {}) {
   // chrome

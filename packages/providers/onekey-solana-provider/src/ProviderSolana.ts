@@ -1,8 +1,8 @@
 import { PublicKey, VersionedTransaction } from '@solana/web3.js';
 import type { SendOptions, Transaction } from '@solana/web3.js';
-import { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
-import { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
+import { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 import base58 from 'bs58';
 
 import { ProviderSolanaBase } from './ProviderSolanaBase';

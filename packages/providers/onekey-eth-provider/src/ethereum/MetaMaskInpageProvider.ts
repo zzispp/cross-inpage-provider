@@ -1,11 +1,11 @@
 /* eslint-disable no-dupe-class-members,@typescript-eslint/ban-ts-comment */
 import { ethErrors } from 'eth-rpc-errors';
 
-import { IJsonRpcRequest, IJsonRpcResponse } from '@onekeyfe/cross-inpage-provider-types';
+import { IJsonRpcRequest, IJsonRpcResponse } from '@zzispp/cross-inpage-provider-types';
 import {
   IBridgeRequestCallback,
   IInpageProviderConfig,
-} from '@onekeyfe/cross-inpage-provider-core';
+} from '@zzispp/cross-inpage-provider-core';
 
 import ProviderEthBase, { BaseProviderOptions } from './ProviderEthBase';
 import messages from './messages';

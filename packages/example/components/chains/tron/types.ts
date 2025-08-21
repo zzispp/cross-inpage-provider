@@ -1,4 +1,4 @@
-import type { TronWeb } from '@onekeyfe/onekey-tron-provider';
+import type { TronWeb } from '@zzispp/onekey-tron-provider';
 
 export interface IProviderApi {
   isOneKey?: boolean;

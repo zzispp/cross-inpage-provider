@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
-import { ProviderBase } from '@onekeyfe/cross-inpage-provider-core'
+import { ProviderBase } from '@zzispp/cross-inpage-provider-core'
 import { ProviderCardanoBase } from './ProviderCardanoBase'
-import { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
+import { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
 import { isWalletEventMethodMatch } from './utils'
-import { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 import { Cbor, Bytes, Cip30DataSignature, Cip30Wallet, NetworkId, Paginate, WalletApi } from './types'
 import * as TypeUtils from './type-utils'
 

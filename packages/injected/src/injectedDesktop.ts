@@ -1,10 +1,10 @@
-import { JsBridgeDesktopInjected } from '@onekeyfe/desktop-bridge-injected';
+import { JsBridgeDesktopInjected } from '@zzispp/desktop-bridge-injected';
 import {
   injectedProviderReceiveHandler,
   injectJsBridge,
-} from '@onekeyfe/cross-inpage-provider-core';
+} from '@zzispp/cross-inpage-provider-core';
 
-import { injectWeb3Provider } from '@onekeyfe/inpage-providers-hub';
+import { injectWeb3Provider } from '@zzispp/inpage-providers-hub';
 
 const bridge = () =>
   new JsBridgeDesktopInjected({

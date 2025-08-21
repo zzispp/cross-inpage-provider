@@ -1,8 +1,8 @@
 import depd from 'depd';
-import { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
-import { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
-import { web3Errors } from '@onekeyfe/cross-inpage-provider-errors';
+import { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
+import { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
+import { web3Errors } from '@zzispp/cross-inpage-provider-errors';
 import entries from 'lodash/entries';
 import isString from 'lodash/isString';
 import { baseEncode, baseDecode } from 'borsh';

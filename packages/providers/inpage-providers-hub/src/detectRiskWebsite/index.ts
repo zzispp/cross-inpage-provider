@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { isInSameOriginIframe } from '@onekeyfe/cross-inpage-provider-core';
+import { isInSameOriginIframe } from '@zzispp/cross-inpage-provider-core';
 import { styleContent } from "./style";
 
 enum EHostSecurityLevel {

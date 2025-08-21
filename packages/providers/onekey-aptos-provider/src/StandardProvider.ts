@@ -13,7 +13,7 @@ import {
   registerWallet,
   UserResponseStatus,
 } from '@aptos-labs/wallet-standard';
-import { stripHexPrefix, bytesToHex } from '@onekeyfe/cross-inpage-provider-core';
+import { stripHexPrefix, bytesToHex } from '@zzispp/cross-inpage-provider-core';
 
 import type {
   Account,

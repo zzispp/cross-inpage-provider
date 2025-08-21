@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { IInjectedProviderNames } from '@onekeyfe/cross-inpage-provider-types';
-import type { ProviderEthereum } from '@onekeyfe/onekey-eth-provider';
+import { IInjectedProviderNames } from '@zzispp/cross-inpage-provider-types';
+import type { ProviderEthereum } from '@zzispp/onekey-eth-provider';
 import { isNumber, isString } from 'lodash-es';
 import { hackConnectButton } from '../connectButtonHack/hackConnectButton';
 import providersHubUtils from '../utils/providersHubUtils';

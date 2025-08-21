@@ -1,5 +1,5 @@
 {
-  "name": "@onekeyfe/desktop-bridge-injected",
+  "name": "@zzispp/desktop-bridge-injected",
   "version": "2.2.39",
   "keywords": [
     "cross-inpage-provider"
@@ -33,7 +33,7 @@
     "electron": "^17.2.0"
   },
   "dependencies": {
-    "@onekeyfe/cross-inpage-provider-core": "2.2.39",
-    "@onekeyfe/cross-inpage-provider-types": "2.2.39"
+    "@zzispp/cross-inpage-provider-core": "2.2.39",
+    "@zzispp/cross-inpage-provider-types": "2.2.39"
   }
 }

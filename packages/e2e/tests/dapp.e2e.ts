@@ -1,11 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-import { connectButtonData } from '@onekeyfe/inpage-providers-hub';
+import { connectButtonData } from '@zzispp/inpage-providers-hub';
 
 const injectedCode = fs.readFileSync(
   path.resolve(
-    'node_modules/@onekeyfe/cross-inpage-provider-injected/dist/injected/injectedNative.js',
+    'node_modules/@zzispp/cross-inpage-provider-injected/dist/injected/injectedNative.js',
   ),
   'utf-8',
 );

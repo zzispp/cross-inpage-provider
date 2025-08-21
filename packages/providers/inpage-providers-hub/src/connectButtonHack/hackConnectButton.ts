@@ -2,8 +2,8 @@ import {
   checkWalletSwitchEnable,
   ISpecialPropertyProviderNamesReflection,
   Logger,
-} from '@onekeyfe/cross-inpage-provider-core';
-import { IInjectedProviderNames } from '@onekeyfe/cross-inpage-provider-types';
+} from '@zzispp/cross-inpage-provider-core';
+import { IInjectedProviderNames } from '@zzispp/cross-inpage-provider-types';
 import { throttle, ThrottleSettings } from 'lodash-es';
 import type { IWindowOneKeyHub } from '../injectWeb3Provider';
 

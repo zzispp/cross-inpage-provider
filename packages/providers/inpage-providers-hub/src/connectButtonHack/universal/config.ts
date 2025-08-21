@@ -1,4 +1,4 @@
-import { IInjectedProviderNames } from '@onekeyfe/cross-inpage-provider-types';
+import { IInjectedProviderNames } from '@zzispp/cross-inpage-provider-types';
 import { WALLET_CONNECT_INFO, WALLET_NAMES } from '../consts';
 import { findIconAndNameByName, findIconAndNameByIcon } from './findIconAndName';
 import { isWalletIconLessEqualThan, replaceIcon } from './imgUtils';

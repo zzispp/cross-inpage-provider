@@ -1,4 +1,4 @@
-import { IInjectedProviderNames } from '@onekeyfe/cross-inpage-provider-types';
+import { IInjectedProviderNames } from '@zzispp/cross-inpage-provider-types';
 import { hackConnectButton } from '../hackConnectButton';
 import { SitesInfo, sitesConfig } from './config';
 import { findIconAndNameByName as defaultFindIconAndName } from './findIconAndName';

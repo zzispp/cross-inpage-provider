@@ -5,11 +5,11 @@ import {
   IInjectedProviderNamesStrings,
   IJsBridgeConfig,
   IJsBridgeMessagePayload,
-} from '@onekeyfe/cross-inpage-provider-types';
+} from '@zzispp/cross-inpage-provider-types';
 import utils from './utils';
 import * as uuid from 'uuid';
 
-import { JsBridgeBase, consts } from '@onekeyfe/cross-inpage-provider-core';
+import { JsBridgeBase, consts } from '@zzispp/cross-inpage-provider-core';
 
 const { EXT_PORT_OFFSCREEN_TO_BG, EXT_PORT_CS_TO_BG, EXT_PORT_UI_TO_BG, ONEKEY_REQUEST_TO_ALL_CS } = consts;
 

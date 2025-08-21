@@ -10,7 +10,7 @@ import {
   SignMessagesResult,
   SignInResult,
   SignTransactionsResult,
-} from '@onekeyfe/onekey-near-provider';
+} from '@zzispp/onekey-near-provider';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import * as NearApi from 'near-api-js';
 import { random } from 'lodash';

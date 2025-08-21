@@ -1,11 +1,11 @@
-import { bytesToHex } from '@onekeyfe/cross-inpage-provider-core';
+import { bytesToHex } from '@zzispp/cross-inpage-provider-core';
 /* eslint-disable tsdoc/syntax */
-import type { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
+import type { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
 import { ProviderBfcBase } from './ProviderBfcBase';
 import type * as TypeUtils from './type-utils';
-import type { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
-import { web3Errors } from '@onekeyfe/cross-inpage-provider-errors';
+import type { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
+import { web3Errors } from '@zzispp/cross-inpage-provider-errors';
 import { TransactionBlock } from '@benfen/bfc.js/transactions';
 
 import { ALL_PERMISSION_TYPES, AccountInfo } from './types';

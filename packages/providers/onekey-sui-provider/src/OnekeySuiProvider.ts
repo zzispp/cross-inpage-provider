@@ -1,9 +1,9 @@
-import { bytesToHex } from '@onekeyfe/cross-inpage-provider-core';
+import { bytesToHex } from '@zzispp/cross-inpage-provider-core';
 /* eslint-disable tsdoc/syntax */
-import type { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { web3Errors } from '@onekeyfe/cross-inpage-provider-errors';
-import type { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
+import type { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { web3Errors } from '@zzispp/cross-inpage-provider-errors';
+import type { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
 
 import { ProviderSuiBase } from './ProviderSuiBase';
 import { ALL_PERMISSION_TYPES } from './types';

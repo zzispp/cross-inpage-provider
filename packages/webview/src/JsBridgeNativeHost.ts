@@ -2,8 +2,8 @@ import React from 'react';
 
 import { WebView } from 'react-native-webview';
 
-import { injectedFactory, JsBridgeBase } from '@onekeyfe/cross-inpage-provider-core';
-import { IJsBridgeConfig, IJsBridgeMessagePayload } from '@onekeyfe/cross-inpage-provider-types';
+import { injectedFactory, JsBridgeBase } from '@zzispp/cross-inpage-provider-core';
+import { IJsBridgeConfig, IJsBridgeMessagePayload } from '@zzispp/cross-inpage-provider-types';
 import { IWebViewWrapperRef } from './useWebViewBridge';
 
 class JsBridgeNativeHost extends JsBridgeBase {

@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable tsdoc/syntax */
-import type { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
+import type { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
 import { ProviderPolkadotBase } from './ProviderPolkadotBase';
 import type * as TypeUtils from './type-utils';
-import type { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import type { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 import type { JsonRpcResponse } from '@polkadot/rpc-provider/types';
 
 import {

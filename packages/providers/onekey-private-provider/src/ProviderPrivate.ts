@@ -1,10 +1,10 @@
 import {
   IInjectedProviderNames,
   IInjectedProviderNamesStrings,
-} from '@onekeyfe/cross-inpage-provider-types';
+} from '@zzispp/cross-inpage-provider-types';
 
-import { IInpageProviderConfig, ProviderBase, switchDefaultWalletNotification, switchNetworkNotification } from '@onekeyfe/cross-inpage-provider-core';
-import { consts } from '@onekeyfe/cross-inpage-provider-core';
+import { IInpageProviderConfig, ProviderBase, switchDefaultWalletNotification, switchNetworkNotification } from '@zzispp/cross-inpage-provider-core';
+import { consts } from '@zzispp/cross-inpage-provider-core';
 
 export interface IOneKeyWalletInfo {
   enableExtContentScriptReloadButton?: boolean;

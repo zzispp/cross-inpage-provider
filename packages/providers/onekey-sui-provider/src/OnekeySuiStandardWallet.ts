@@ -6,7 +6,7 @@ import {
 } from '@mysten/wallet-standard';
 import mitt from 'mitt';
 
-import { hexToBytes } from '@onekeyfe/cross-inpage-provider-core';
+import { hexToBytes } from '@zzispp/cross-inpage-provider-core';
 
 import { ALL_PERMISSION_TYPES } from './types';
 

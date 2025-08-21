@@ -1,8 +1,8 @@
 import dequal from 'fast-deep-equal';
 
-import { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
-import { web3Errors } from '@onekeyfe/cross-inpage-provider-errors';
+import { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
+import { web3Errors } from '@zzispp/cross-inpage-provider-errors';
 
 import { ProviderConfluxBase } from './ProviderConfluxBase';
 import {

@@ -1,4 +1,4 @@
-import { hexToBytes } from '@onekeyfe/cross-inpage-provider-core';
+import { hexToBytes } from '@zzispp/cross-inpage-provider-core';
 import mitt, { Emitter } from 'mitt';
 import {
   IdentifierArray,

@@ -1,5 +1,5 @@
 {
-  "name": "@onekeyfe/onekey-eth-provider",
+  "name": "@zzispp/onekey-eth-provider",
   "version": "2.2.39",
   "keywords": [
     "cross-inpage-provider"
@@ -27,10 +27,10 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@onekeyfe/cross-inpage-provider-core": "2.2.39",
-    "@onekeyfe/cross-inpage-provider-errors": "2.2.39",
-    "@onekeyfe/cross-inpage-provider-types": "2.2.39",
-    "@onekeyfe/extension-bridge-injected": "2.2.39",
+    "@zzispp/cross-inpage-provider-core": "2.2.39",
+    "@zzispp/cross-inpage-provider-errors": "2.2.39",
+    "@zzispp/cross-inpage-provider-types": "2.2.39",
+    "@zzispp/extension-bridge-injected": "2.2.39",
     "eth-rpc-errors": "^4.0.3",
     "uuid": "^8.3.2"
   },

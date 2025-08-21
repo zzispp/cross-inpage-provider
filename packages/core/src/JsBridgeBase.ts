@@ -3,8 +3,8 @@ import { isPlainObject, isString, isNil } from 'lodash-es';
 import { CrossEventEmitter } from './CrossEventEmitter';
 import { appDebugLogger, consoleErrorInDev } from './loggers';
 
-import type { Web3ProviderError } from '@onekeyfe/cross-inpage-provider-errors';
-import { web3Errors, toNativeErrorObject } from '@onekeyfe/cross-inpage-provider-errors';
+import type { Web3ProviderError } from '@zzispp/cross-inpage-provider-errors';
+import { web3Errors, toNativeErrorObject } from '@zzispp/cross-inpage-provider-errors';
 import {
   IDebugLogger,
   IInjectedProviderNamesStrings,
@@ -13,7 +13,7 @@ import {
   IJsBridgeMessagePayload,
   IJsBridgeMessageTypes,
   IJsonRpcResponse,
-} from '@onekeyfe/cross-inpage-provider-types';
+} from '@zzispp/cross-inpage-provider-types';
 import versionInfo from './versionInfo';
 
 const orignalConsoleLog = console.log;

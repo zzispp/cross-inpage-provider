@@ -8,7 +8,7 @@ import {
   IJsonRpcResponse,
   ConsoleLike,
   IDebugLogger,
-} from '@onekeyfe/cross-inpage-provider-types';
+} from '@zzispp/cross-inpage-provider-types';
 import siteMetadata from './siteMetadata';
 import { fakeLogger, fakeDebugLogger, consoleErrorInDev } from './loggers';
 import versionInfo from './versionInfo';

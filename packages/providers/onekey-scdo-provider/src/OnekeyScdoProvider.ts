@@ -1,7 +1,7 @@
-import type { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
+import type { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
 import { ProviderScdoBase } from './ProviderScdoBase';
-import type { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import type { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 import type * as TypeUtils from './type-utils';
 
 export enum PROVIDER_EVENTS {

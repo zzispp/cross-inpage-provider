@@ -1,4 +1,4 @@
-import type { CrossEventEmitter } from '@onekeyfe/cross-inpage-provider-core';
+import type { CrossEventEmitter } from '@zzispp/cross-inpage-provider-core';
 
 export type ConsoleLike = Pick<Console, 'log' | 'warn' | 'error' | 'debug' | 'info' | 'trace'>;
 

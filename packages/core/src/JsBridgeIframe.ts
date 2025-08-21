@@ -6,7 +6,7 @@ import {
   IJsBridgeMessagePayload,
   IPostMessageEventData,
   IOptionsWithDebugLogger,
-} from '@onekeyfe/cross-inpage-provider-types';
+} from '@zzispp/cross-inpage-provider-types';
 import { JsBridgeBase } from './JsBridgeBase';
 
 let postMessageListenerAdded = false;

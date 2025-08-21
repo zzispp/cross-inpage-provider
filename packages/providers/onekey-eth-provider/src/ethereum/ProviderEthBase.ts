@@ -7,9 +7,9 @@ import {
   IBridgeRequestCallback,
   IInpageProviderConfig,
   ProviderBase,
-} from '@onekeyfe/cross-inpage-provider-core';
+} from '@zzispp/cross-inpage-provider-core';
 
-import { IInjectedProviderNames, IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import { IInjectedProviderNames, IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 
 import messages from './messages';
 import {

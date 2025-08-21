@@ -1,5 +1,5 @@
-import { IInpageProviderConfig } from '@onekeyfe/cross-inpage-provider-core';
-import { IJsonRpcRequest } from '@onekeyfe/cross-inpage-provider-types';
+import { IInpageProviderConfig } from '@zzispp/cross-inpage-provider-core';
+import { IJsonRpcRequest } from '@zzispp/cross-inpage-provider-types';
 
 import { ProviderBtcBase } from './ProviderBtcBase';
 

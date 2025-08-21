@@ -2,8 +2,8 @@ import { useRef, useState } from 'react';
 
 import { WebView as ReactNativeWebView } from 'react-native-webview';
 
-import { JsBridgeBase } from '@onekeyfe/cross-inpage-provider-core';
-import { IElectronWebView } from '@onekeyfe/cross-inpage-provider-types';
+import { JsBridgeBase } from '@zzispp/cross-inpage-provider-core';
+import { IElectronWebView } from '@zzispp/cross-inpage-provider-types';
 
 export type IWebViewWrapperRef = {
   innerRef?: ReactNativeWebView | IElectronWebView | null;

@@ -1,4 +1,4 @@
-import { getOrCreateExtInjectedJsBridge } from "@onekeyfe/extension-bridge-injected";
+import { getOrCreateExtInjectedJsBridge } from "@zzispp/extension-bridge-injected";
 import { ProviderBtc } from "./ProviderBtc";
 import {
   Fees,

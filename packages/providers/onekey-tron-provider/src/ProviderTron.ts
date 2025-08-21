@@ -9,9 +9,9 @@ import {
   IInpageProviderConfig,
   checkWalletSwitchEnable,
   defineWindowProperty,
-} from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
-import { web3Errors } from '@onekeyfe/cross-inpage-provider-errors';
+} from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
+import { web3Errors } from '@zzispp/cross-inpage-provider-errors';
 
 import { ProviderTronBase } from './ProviderTronBase';
 import {

@@ -4,9 +4,9 @@ import {
   appDebugLogger as debugLogger,
   JsBridgeBase,
   consts,
-} from '@onekeyfe/cross-inpage-provider-core';
+} from '@zzispp/cross-inpage-provider-core';
 
-import { IJsBridgeConfig, IJsBridgeMessagePayload } from '@onekeyfe/cross-inpage-provider-types';
+import { IJsBridgeConfig, IJsBridgeMessagePayload } from '@zzispp/cross-inpage-provider-types';
 
 class JsBridgeDesktopInjected extends JsBridgeBase {
   constructor(config: IJsBridgeConfig) {

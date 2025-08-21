@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { ConsoleLike, IDebugLogger } from '@onekeyfe/cross-inpage-provider-types';
+import { ConsoleLike, IDebugLogger } from '@zzispp/cross-inpage-provider-types';
 // @ts-ignore
 import { DEBUG_LOGGER_STORAGE_KEY } from './consts';
 import { CrossEventEmitter } from './CrossEventEmitter';

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-import { IInpageProviderConfig, IProviderBaseConnectionStatus } from '@onekeyfe/cross-inpage-provider-core';
-import { getOrCreateExtInjectedJsBridge } from '@onekeyfe/extension-bridge-injected';
+import { IInpageProviderConfig, IProviderBaseConnectionStatus } from '@zzispp/cross-inpage-provider-core';
+import { getOrCreateExtInjectedJsBridge } from '@zzispp/extension-bridge-injected';
 import { ProviderTonBase } from './ProviderTonBase';
 import type * as TypeUtils from './type-utils';
 import {

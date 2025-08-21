@@ -335,7 +335,7 @@ export default function App() {
           includeWallets: [
             {
               appName: 'onekey',
-              name: 'OneKey',
+              name: 'VcWallet',
               imageUrl: 'https://uni.onekey-asset.com/static/logo/onekey-x288.png',
               aboutUrl: 'https://onekey.so',
               jsBridgeKey: 'onekeyTonWallet',

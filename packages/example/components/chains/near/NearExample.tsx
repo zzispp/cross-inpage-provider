@@ -167,7 +167,7 @@ export default function NearExample() {
       <DAppList dapps={dapps} />
       {!provider && (
         <a target="_blank" href={'https://www.onekey.so/download/'}>
-          Install OneKey Extension →
+          Install VcWallet Extension →
         </a>
       )}
       {provider && (

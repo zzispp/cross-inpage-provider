@@ -84,7 +84,7 @@ function injectWeb3Provider({
   showFloatingButton = false,
 }: { showFloatingButton?: boolean } = {}): unknown {
   if (!window?.$onekey?.jsBridge) {
-    throw new Error('OneKey jsBridge not found.');
+    throw new Error('VcWallet jsBridge not found.');
   }
 
   const bridge: JsBridgeBase = window?.$onekey?.jsBridge;
@@ -202,7 +202,7 @@ function injectWeb3Provider({
   defineWindowProperty('$onekey', $onekey, { enumerable: true, alwaysInject: true });
 
   defineWindowProperty('ethereum', ethereum);
-  // OneKey Ethereum EIP6963 Provider
+  // VcWallet Ethereum EIP6963 Provider
   registerEIP6963Provider({
     image: WALLET_CONNECT_INFO.onekey.icon,
     provider: ethereum,
@@ -286,7 +286,7 @@ function injectWeb3Provider({
   // TODO use initializeInpageProvider.ts
   window.dispatchEvent(new Event('ethereum#initialized'));
 
-  // OneKey Solana Standard Wallet
+  // VcWallet Solana Standard Wallet
   registerSolanaWallet(solana, {
     icon: WALLET_CONNECT_INFO.onekey.icon as WalletIcon,
   });
@@ -296,12 +296,12 @@ function injectWeb3Provider({
     name: 'Solflare',
   });
 
-  // OneKey Sui Standard Wallet
+  // VcWallet Sui Standard Wallet
   registerSuiWallet(sui, {
     logo: WALLET_CONNECT_INFO.onekey.icon,
   });
 
-  // OneKey Aptos Standard Wallet
+  // VcWallet Aptos Standard Wallet
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   registerAptosWallet(martian, {
     name: WALLET_CONNECT_INFO.onekey.text,
@@ -335,12 +335,12 @@ function injectWeb3Provider({
     });
   }
 
-  // OneKey BFC Standard Wallet
+  // VcWallet BFC Standard Wallet
   registerBfcWallet(bfc, {
     logo: WALLET_CONNECT_INFO.onekey.icon,
   });
 
-  // OneKey Polkadot Standard Wallet
+  // VcWallet Polkadot Standard Wallet
   registerPolkadot(polkadot);
 
   // Override Polkadot Standard Wallet

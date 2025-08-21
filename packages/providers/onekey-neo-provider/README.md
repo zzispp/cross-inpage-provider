@@ -1,1 +1,1 @@
-# OneKey Neo Provider 
+# VcWallet Neo Provider 

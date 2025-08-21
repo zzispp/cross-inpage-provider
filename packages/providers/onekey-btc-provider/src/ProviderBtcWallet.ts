@@ -60,7 +60,7 @@ class ProviderBtcWallet extends ProviderBtc implements IProviderBtcWallet {
 
   getWalletProviderName(): Promise<string> {
     this._state.isBtcWalletProvider = true;
-    return Promise.resolve("OneKey");
+    return Promise.resolve("VcWallet");
   }
 
   async getAddress(): Promise<string> {
@@ -77,7 +77,7 @@ class ProviderBtcWallet extends ProviderBtc implements IProviderBtcWallet {
     const result = (await this._request<number>({
       method: ProviderMethods.GET_BALANCE,
     })) as unknown as BalanceInfo;
-		return Number(result?.confirmed ?? 0);
+    return Number(result?.confirmed ?? 0);
   }
 
   signMessageBIP322(message: string): Promise<string> {

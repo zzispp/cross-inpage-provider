@@ -82,7 +82,7 @@ function Example() {
       <ApiGroup title="SignMessage">
         {/* <ApiPayload
           title="signMessage"
-          description="签名消息, signMessage 不安全已经弃用, 目前（OneKey、Suiet、Sui Wallet、Martian） signMessage 实际实现已经变成了 signPersonalMessage"
+          description="签名消息, signMessage 不安全已经弃用, 目前（VcWallet、Suiet、Sui Wallet、Martian） signMessage 实际实现已经变成了 signPersonalMessage"
           presupposeParams={params.signMessage}
           onExecute={async (request: string) => {
             const res = await signMessage({
@@ -359,7 +359,7 @@ function Example() {
           description="BUSD代币转账签名并执行"
           presupposeParams={signTokenTransactionParams}
           onExecute={async (request: string) => {
-            const { from, to, amount, token,busdGas } = JSON.parse(request) as {
+            const { from, to, amount, token, busdGas } = JSON.parse(request) as {
               from: string;
               to: string;
               amount: number;
@@ -436,7 +436,7 @@ function Example() {
         <ApiForm title="Benfen Swap" description="Benfen Swap 相关操作">
           <ApiForm.Text id="swapButtonTitle" value="测试 BFC 转 BUSD" size="lg" />
 
-          <ApiForm.Field type="number" id="swapBfcAmount" label="BFC 数量" required defaultValue='0.01'/>
+          <ApiForm.Field type="number" id="swapBfcAmount" label="BFC 数量" required defaultValue='0.01' />
           <ApiForm.Checkbox id="useBusdGasSwapBfc" label="使用 BUSD 作为 gas" />
 
           <ApiForm.Button
@@ -447,10 +447,10 @@ function Example() {
               const busdGas = formRef?.getValue<boolean>('useBusdGasSwapBfc');
 
               const tx = new TransactionBlock();
-              tx.setSenderIfNotSet(currentAccount?.address??'');
+              tx.setSenderIfNotSet(currentAccount?.address ?? '');
 
               const bigintAmount = BigInt(new BigNumber(amount).shiftedBy(BFC_DECIMALS).toFixed(0));
-              const from = currentAccount?.address??'';
+              const from = currentAccount?.address ?? '';
 
               const { data: bfcCoins } = await client.getCoins({
                 owner: from,
@@ -518,9 +518,9 @@ function Example() {
               },
             }}
           />
-          <ApiForm.Field type="text" id="swapResponse" label="响应"  />
+          <ApiForm.Field type="text" id="swapResponse" label="响应" />
 
-          <ApiForm.Separator/>
+          <ApiForm.Separator />
 
           <ApiForm.Field type="number" id="swapBusdAmount" label="BUSD 数量" required defaultValue='0.01' />
           <ApiForm.Checkbox id="useBusdGasSwapBusd" label="使用 BUSD 作为 gas" />
@@ -532,7 +532,7 @@ function Example() {
               const amount = formRef?.getValue<string>('swapBusdAmount') ?? '0';
               const busdGas = formRef?.getValue<boolean>('useBusdGasSwapBusd');
               const tx = new TransactionBlock();
-              const from = currentAccount?.address??'';
+              const from = currentAccount?.address ?? '';
 
               console.log('=====>>>>> busdGas', busdGas);
 
@@ -545,9 +545,9 @@ function Example() {
 
               let gasCoins = busdCoins;
               let coin: ReturnType<(typeof tx)['splitCoins']>;
-              if(busdGas) {
+              if (busdGas) {
                 // 先从合并后的 coin 分割出用于交换的部分
-                coin = tx.splitCoins(tx.gas ,[tx.pure(bigintAmount)]);
+                coin = tx.splitCoins(tx.gas, [tx.pure(bigintAmount)]);
               } else {
                 const [primaryCoin, ...otherCoins] = busdCoins;
                 if (otherCoins.length > 0) {
@@ -606,7 +606,7 @@ function Example() {
               },
             }}
           />
-          <ApiForm.Field type="text" id="response" label="响应"  />
+          <ApiForm.Field type="text" id="response" label="响应" />
         </ApiForm>
 
       </ApiGroup>

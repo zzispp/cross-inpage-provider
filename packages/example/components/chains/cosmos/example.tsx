@@ -58,7 +58,7 @@ export default function Example() {
     },
     {
       uuid: 'injected-onekey',
-      name: 'Injected OneKey',
+      name: 'Injected VcWallet',
       inject: '$onekey.cosmos',
     },
   ]);
@@ -300,42 +300,42 @@ export default function Example() {
 
             const msgs:
               | {
-                  typeUrl: string;
-                  value: Uint8Array;
-                }[]
+                typeUrl: string;
+                value: Uint8Array;
+              }[]
               | undefined = obj.msgs?.map((msg: { type: string; value: any }) => {
-              const value = msg.value;
-              if (msg.type === '/cosmos.bank.v1beta1.MsgSend') {
-                return {
-                  typeUrl: '/cosmos.bank.v1beta1.MsgSend',
-                  value: MsgSend.encode(
-                    MsgSend.fromPartial({
-                      fromAddress: value.from_address,
-                      toAddress: value.to_address,
-                      amount: value.amount?.map((amount: any) => ({
-                        amount: amount.amount,
-                        denom: amount.denom,
-                      })),
-                    }),
-                  ).finish(),
-                };
-              } else if (msg.type === '/cosmwasm.wasm.v1.MsgExecuteContract') {
-                return {
-                  typeUrl: '/cosmwasm.wasm.v1.MsgExecuteContract',
-                  value: MsgExecuteContract.encode(
-                    MsgExecuteContract.fromPartial({
-                      sender: value.sender,
-                      contract: value.contract,
-                      msg: Buffer.from(JSON.stringify(removeNull(value.msg))),
-                      funds: value.funds?.map((amount: any) => ({
-                        amount: amount.amount,
-                        denom: amount.denom,
-                      })),
-                    }),
-                  ).finish(),
-                };
-              }
-            });
+                const value = msg.value;
+                if (msg.type === '/cosmos.bank.v1beta1.MsgSend') {
+                  return {
+                    typeUrl: '/cosmos.bank.v1beta1.MsgSend',
+                    value: MsgSend.encode(
+                      MsgSend.fromPartial({
+                        fromAddress: value.from_address,
+                        toAddress: value.to_address,
+                        amount: value.amount?.map((amount: any) => ({
+                          amount: amount.amount,
+                          denom: amount.denom,
+                        })),
+                      }),
+                    ).finish(),
+                  };
+                } else if (msg.type === '/cosmwasm.wasm.v1.MsgExecuteContract') {
+                  return {
+                    typeUrl: '/cosmwasm.wasm.v1.MsgExecuteContract',
+                    value: MsgExecuteContract.encode(
+                      MsgExecuteContract.fromPartial({
+                        sender: value.sender,
+                        contract: value.contract,
+                        msg: Buffer.from(JSON.stringify(removeNull(value.msg))),
+                        funds: value.funds?.map((amount: any) => ({
+                          amount: amount.amount,
+                          denom: amount.denom,
+                        })),
+                      }),
+                    ).finish(),
+                  };
+                }
+              });
 
             if (!msgs) return JSON.stringify({ error: 'msgs is null' });
 

@@ -25,7 +25,7 @@ export default function Example() {
     },
     {
       uuid: 'injected-onekey',
-      name: 'Injected OneKey',
+      name: 'Injected VcWallet',
       inject: '$onekey.scdo',
     },
   ]);
@@ -62,7 +62,7 @@ export default function Example() {
     tokens.push({
       name: ' SCDO TEST0',
       // address: '1S015daca201b66f96f74b4230916f9db8db0c0002',
-      address:'1S01f0daaf7a59fb5eb90256112bf5d080ff290022'
+      address: '1S01f0daaf7a59fb5eb90256112bf5d080ff290022'
     });
 
     return (

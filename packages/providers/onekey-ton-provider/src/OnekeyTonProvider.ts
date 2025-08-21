@@ -127,7 +127,7 @@ export class ProviderTon extends ProviderTonBase implements IProviderTon {
     features: [{ name: 'SendTransaction', maxMessages: 4 }],
   };
   walletInfo?: WalletInfo = {
-    name: 'OneKey',
+    name: 'VcWallet',
     image: 'https://common.onekey-asset.com/logo/onekey-x288.png',
     about_url: 'https://onekey.so',
   };
@@ -373,7 +373,7 @@ export class ProviderTon extends ProviderTonBase implements IProviderTon {
     const { code, message } = error as { code?: number; message?: string };
     if (code === 4001) {
       let errorMessage: string = ConnectEventErrorMessage.USER_DECLINED;
-      if(method === 'sendTransaction' || method === 'signData'){
+      if (method === 'sendTransaction' || method === 'signData') {
         errorMessage = SendTransactionErrorMessage.USER_REJECTS_ERROR;
       }
       return {
@@ -383,7 +383,7 @@ export class ProviderTon extends ProviderTonBase implements IProviderTon {
           message: errorMessage,
         },
       } as WalletResponseError<T>;
-    } else if(code === TonResponseError.ParameterError) {
+    } else if (code === TonResponseError.ParameterError) {
       return {
         id,
         error: {
@@ -431,7 +431,7 @@ export class ProviderTon extends ProviderTonBase implements IProviderTon {
         } as WalletResponseError<T>;
       }
     } catch (error) {
-      return this.convertError(id, error,message.method);
+      return this.convertError(id, error, message.method);
     }
 
     if (res === undefined) {

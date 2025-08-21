@@ -558,7 +558,7 @@ function SecurityInfo({
             lineHeight: '16px',
           }}
         >
-          OneKey
+          VcWallet
         </span>
       </div>
     </div>

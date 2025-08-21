@@ -99,7 +99,7 @@ function MultiAgentTransactionFlow() {
         typeArguments: [],
         functionArguments: [account.address, new U64(1)],
       },
-      options:{
+      options: {
         expireTimestamp: Math.floor(Date.now() / 1000) + 60 * 5,
       }
     });
@@ -124,7 +124,7 @@ function MultiAgentTransactionFlow() {
       console.log('Sender sign response:', response);
 
       const senderAuth = response.authenticator;
-      console.log('===== senderAuth ===== ', `isEd25519: ${senderAuth.isEd25519()? 'true' : 'false'}, isMultiEd25519: ${senderAuth.isMultiEd25519()? 'true' : 'false'}, isSingleKey: ${senderAuth.isSingleKey()? 'true' : 'false'}, isMultiKey: ${senderAuth.isMultiKey()? 'true' : 'false'}`);
+      console.log('===== senderAuth ===== ', `isEd25519: ${senderAuth.isEd25519() ? 'true' : 'false'}, isMultiEd25519: ${senderAuth.isMultiEd25519() ? 'true' : 'false'}, isSingleKey: ${senderAuth.isSingleKey() ? 'true' : 'false'}, isMultiKey: ${senderAuth.isMultiKey() ? 'true' : 'false'}`);
       setSenderAuthenticator(senderAuth);
       apiFromRef.current?.setJsonValue('senderSignResponse', response.authenticator);
     } catch (error) {
@@ -151,7 +151,7 @@ function MultiAgentTransactionFlow() {
       console.log('Secondary signer authenticator:', authenticator);
 
       setSecondarySignerAuthenticator(authenticator);
-      console.log('===== secondaryAuth ===== ', `isEd25519: ${authenticator.isEd25519()? 'true' : 'false'}, isMultiEd25519: ${authenticator.isMultiEd25519()? 'true' : 'false'}, isSingleKey: ${authenticator.isSingleKey()? 'true' : 'false'}, isMultiKey: ${authenticator.isMultiKey()? 'true' : 'false'}`);
+      console.log('===== secondaryAuth ===== ', `isEd25519: ${authenticator.isEd25519() ? 'true' : 'false'}, isMultiEd25519: ${authenticator.isMultiEd25519() ? 'true' : 'false'}, isSingleKey: ${authenticator.isSingleKey() ? 'true' : 'false'}, isMultiKey: ${authenticator.isMultiKey() ? 'true' : 'false'}`);
       apiFromRef.current?.setJsonValue('secondarySignerSignResponse', authenticator);
       return Promise.resolve();
     } catch (error) {
@@ -183,7 +183,7 @@ function MultiAgentTransactionFlow() {
       });
 
       apiFromRef.current?.setJsonValue('submitTransactionResponse', response);
-      if(window && window.open && response.hash) {
+      if (window && window.open && response.hash) {
         window.open(`https://explorer.aptoslabs.com/txn/${response.hash}`, '_blank');
       }
     } catch (error) {
@@ -258,7 +258,7 @@ function SponsorTransactionFlow() {
           AccountAddress.from("0x0").toUint8Array(),
         ],
       },
-      options:{
+      options: {
         expireTimestamp: Math.floor(Date.now() / 1000) + 60 * 5,
       }
     });
@@ -331,7 +331,7 @@ function SponsorTransactionFlow() {
         feePayerAuthenticator: feepayerAuthenticator,
       });
       apiFromRef.current?.setJsonValue('submitTransactionResponse', response);
-      if(window && window.open && response.hash) {
+      if (window && window.open && response.hash) {
         window.open(`https://explorer.aptoslabs.com/txn/${response.hash}`, '_blank');
       }
     } catch (error) {
@@ -472,7 +472,7 @@ function Example() {
             id: 'signIn',
             name: 'signIn',
             value: JSON.stringify({
-              walletName: 'OneKey',
+              walletName: 'VcWallet',
               input: {
                 domain: "localhost:3000",
                 nonce: Math.random().toString(16),
@@ -510,7 +510,7 @@ function Example() {
             return Promise.resolve(isValidSignature.toString());
           }}
         />
-         {/* <ApiPayload
+        {/* <ApiPayload
           title="openInMobileApp"
           description="signMessageAndVerify"
           presupposeParams={params.signMessage}
@@ -573,7 +573,7 @@ function Example() {
             return {
               txn: res.bcsToHex().toStringWithoutPrefix(),
               result: await signTransaction({
-                transactionOrPayload:res
+                transactionOrPayload: res
               }),
             };
           }}
@@ -624,7 +624,7 @@ function Example() {
             return {
               txn: res.bcsToHex().toStringWithoutPrefix(),
               result: await signTransaction({
-                transactionOrPayload:res
+                transactionOrPayload: res
               }),
             };
           }}
@@ -744,7 +744,7 @@ function Example() {
 
         <ApiPayload
           title="signAndSubmitTransaction Encode Argument"
-          description="Encode Argument 测试 (OneKey、OKX、MizuWallet 等都不支持)"
+          description="Encode Argument 测试 (VcWallet、OKX、MizuWallet 等都不支持)"
           presupposeParams={[
             {
               id: 'sender',
@@ -801,7 +801,7 @@ function Example() {
             };
           }}
         />
-         <ApiPayload
+        <ApiPayload
           title="signAndSubmitTransaction test set gas"
           description="测试设置 gas"
           presupposeParams={[
@@ -812,32 +812,32 @@ function Example() {
             },
           ]}
           onExecute={async (request: string) => {
-              const commitedTransaction = await signAndSubmitTransaction({
-                sender: account?.address.toString() ?? '',
-                data: {
-                  function: "0x1::coin::transfer",
-                  typeArguments: [APTOS_COIN],
-                  functionArguments: [account.address.toString(), 1], // 1 is in Octas
-                },
-                options: { maxGasAmount: MaxGasAMount },
-              })
+            const commitedTransaction = await signAndSubmitTransaction({
+              sender: account?.address.toString() ?? '',
+              data: {
+                function: "0x1::coin::transfer",
+                typeArguments: [APTOS_COIN],
+                functionArguments: [account.address.toString(), 1], // 1 is in Octas
+              },
+              options: { maxGasAmount: MaxGasAMount },
+            })
 
-              const executedTransaction = await aptosClient.waitForTransaction({
-                transactionHash: commitedTransaction.hash,
+            const executedTransaction = await aptosClient.waitForTransaction({
+              transactionHash: commitedTransaction.hash,
+            });
+
+            if ((executedTransaction as any).max_gas_amount == MaxGasAMount) {
+              return Promise.resolve({
+                title: "Success",
+                description: `transaction ${executedTransaction.hash} executed with a max gas amount of ${MaxGasAMount}`,
               });
-
-              if ((executedTransaction as any).max_gas_amount == MaxGasAMount) {
-                return Promise.resolve({
-                  title: "Success",
-                  description: `transaction ${executedTransaction.hash} executed with a max gas amount of ${MaxGasAMount}`,
-                });
-              } else {
-                return Promise.resolve({
-                  variant: "destructive",
-                  title: "Error",
-                  description: `transaction ${executedTransaction.hash} executed with a max gas amount of ${get(executedTransaction,"max_gas_amount")}`,
-                });
-              }
+            } else {
+              return Promise.resolve({
+                variant: "destructive",
+                title: "Error",
+                description: `transaction ${executedTransaction.hash} executed with a max gas amount of ${get(executedTransaction, "max_gas_amount")}`,
+              });
+            }
           }}
         />
       </ApiGroup>
@@ -898,7 +898,7 @@ function AptosConnectButton() {
               return {
                 id: wallet.name,
                 name: wallet.name,
-                tags: [get(wallet,'isAIP62Standard') ? 'AIP62' : '', get(wallet,'isAptosNativeWallet') ? 'Aptos Native' : ''],
+                tags: [get(wallet, 'isAIP62Standard') ? 'AIP62' : '', get(wallet, 'isAptosNativeWallet') ? 'Aptos Native' : ''],
               };
             }),
           );
@@ -931,7 +931,7 @@ export default function App() {
           network: Network.MAINNET,
         }}
         // @ts-expect-error
-        optInWallets={['Petra', 'OneKey', 'OKX Wallet', 'Nightly', 'Mizu Wallet', 'Pontem Wallet']}
+        optInWallets={['Petra', 'VcWallet', 'OKX Wallet', 'Nightly', 'Mizu Wallet', 'Pontem Wallet']}
         onError={(error) => {
           // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
           console.log('error', error);

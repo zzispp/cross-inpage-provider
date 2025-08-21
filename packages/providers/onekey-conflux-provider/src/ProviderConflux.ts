@@ -57,7 +57,7 @@ class ProviderConflux extends ProviderConfluxBase implements IProviderConflux {
       };
       this.emit(ProviderEvents.CONNECT, { chainId, networkId });
     } catch (error) {
-      this._log.error('OneKey: Failed to get initial state. Please report this bug.', error);
+      this._log.error('VcWallet: Failed to get initial state. Please report this bug.', error);
     } finally {
       this._initialized = true;
     }

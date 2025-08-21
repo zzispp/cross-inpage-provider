@@ -46,7 +46,7 @@ export default function Example() {
     },
     {
       uuid: 'injected-onekey',
-      name: 'Injected OneKey',
+      name: 'Injected VcWallet',
       inject: '$onekey.cardano',
     },
   ]);
@@ -454,7 +454,7 @@ export default function Example() {
 
               // 构建支付金额
               const assets: { [key: string]: bigint } = { [tokenConfig.unit]: BigInt(amount) };
-              
+
               // 如果不是 ADA，需要添加最小 ADA 作为交易费
               if (coin !== 'ADA') {
                 assets.lovelace = BigInt(2000000); // 添加 2 ADA 作为最小 ADA 要求

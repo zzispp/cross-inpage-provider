@@ -114,7 +114,7 @@ export default class ProviderEthBase extends ProviderBase {
     this.request = this.request.bind(this);
 
     // TODO jsBridge disconnect event
-    const disconnectHandler = this._handleStreamDisconnect.bind(this, 'OneKey');
+    const disconnectHandler = this._handleStreamDisconnect.bind(this, 'VcWallet');
 
     // setup own event listeners
 
@@ -125,7 +125,7 @@ export default class ProviderEthBase extends ProviderBase {
 
     // setup RPC connection
     // TODO jsBridge disconnect event
-    const disconnectHandlerRpc = this._handleStreamDisconnect.bind(this, 'OneKey RpcProvider');
+    const disconnectHandlerRpc = this._handleStreamDisconnect.bind(this, 'VcWallet RpcProvider');
 
     // handle RPC requests via dapp-side rpc engine
     // TODO middleware like methods

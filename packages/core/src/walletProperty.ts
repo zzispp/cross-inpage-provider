@@ -58,7 +58,7 @@ export function checkWalletSwitchEnable() {
     }
     if (!walletInfoLocal?.isDefaultWallet) {
       if (process.env.NODE_ENV !== 'production') {
-        console.log('OneKey is not default wallet');
+        console.log('VcWallet is not default wallet');
       }
       return false;
     }

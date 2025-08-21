@@ -224,7 +224,7 @@ class ProviderPolkadot extends ProviderPolkadotBase implements IProviderPolkadot
   private createMessage(payload: IMessagePayload): IPostMessage {
     return {
       id: 2,
-      origin: 'OneKey Polkadot Provider',
+      origin: 'VcWallet Polkadot Provider',
       ...payload,
     };
   }
@@ -290,7 +290,7 @@ class ProviderPolkadot extends ProviderPolkadotBase implements IProviderPolkadot
 
       this.postResponse({
         id: 1,
-        origin: 'OneKey Polkadot Provider',
+        origin: 'VcWallet Polkadot Provider',
         signature: result.signature,
       });
 
@@ -312,7 +312,7 @@ class ProviderPolkadot extends ProviderPolkadotBase implements IProviderPolkadot
 
       this.postResponse({
         id: 1,
-        origin: 'OneKey Polkadot Provider',
+        origin: 'VcWallet Polkadot Provider',
         signature: result.signature,
       });
 
@@ -370,14 +370,14 @@ class ProviderPolkadot extends ProviderPolkadotBase implements IProviderPolkadot
   }
 }
 
-const registerPolkadot = (provider: ProviderPolkadot, name = 'OneKey', version = '1.0.0') => {
+const registerPolkadot = (provider: ProviderPolkadot, name = 'VcWallet', version = '1.0.0') => {
   try {
     const enableFn = async (originName: string): Promise<Injected> => {
       await provider.web3Enable(originName);
       return new OneKeyInjected(provider);
     };
 
-    injectExtension(enableFn, { name: name ?? 'OneKey', version: version ?? '1.0.0' });
+    injectExtension(enableFn, { name: name ?? 'VcWallet', version: version ?? '1.0.0' });
   } catch (error) {
     console.error(error);
   }

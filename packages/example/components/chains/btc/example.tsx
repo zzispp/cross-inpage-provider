@@ -26,7 +26,7 @@ export default function BTCExample() {
     },
     {
       uuid: 'injected-onekey',
-      name: 'Injected OneKey',
+      name: 'Injected VcWallet',
       inject: '$onekey.btc',
     },
   ]);

@@ -16,9 +16,9 @@ export const NAMI_TARGET = 'nami-wallet';
 export type CardanoRequest = WalletApi & {
   connect: () => Promise<{ account: string }>
   // override the type of the request method
-  getUtxos: (params: {amount?: Cbor, paginate?: Paginate}) => Promise<Cbor[] | undefined>
-  signTx: (params: {tx: Cbor, partialSign?: boolean}) => Promise<Cbor>
-  signData: (params: {addr: Cbor, payload: Bytes}) => Promise<Cip30DataSignature>;
+  getUtxos: (params: { amount?: Cbor, paginate?: Paginate }) => Promise<Cbor[] | undefined>
+  signTx: (params: { tx: Cbor, partialSign?: boolean }) => Promise<Cbor>
+  signData: (params: { addr: Cbor, payload: Bytes }) => Promise<Cip30DataSignature>;
 }
 
 export type JsBridgeRequest = {
@@ -55,7 +55,7 @@ type OneKeyCardanoProviderProps = IInpageProviderConfig & {
   timeout?: number;
 };
 
-type CardanoAccount = { accounts: {address: string} }
+type CardanoAccount = { accounts: { address: string } }
 
 class ProviderCardano extends ProviderCardanoBase implements IProviderCardano {
   private _account: string | null = null
@@ -115,7 +115,7 @@ class ProviderCardano extends ProviderCardanoBase implements IProviderCardano {
     return this._callBridge(param);
   }
 
-  private _handleConnected(account: string, options: {emit: boolean})  {
+  private _handleConnected(account: string, options: { emit: boolean }) {
     this._account = account
     if (options.emit && this.isConnectionStatusChanged('connected')) {
       this.connectionStatus = 'connected'
@@ -133,7 +133,7 @@ class ProviderCardano extends ProviderCardanoBase implements IProviderCardano {
   }
 
   override isAccountsChanged(address: string): boolean {
-    return address !==  this._account
+    return address !== this._account
   }
 
   private _handleAccountChange(payload: CardanoAccount) {
@@ -168,29 +168,29 @@ class ProviderCardano extends ProviderCardanoBase implements IProviderCardano {
   walletInfo(): Cip30Wallet {
     return {
       apiVersion: '0.1.0',
-      name: 'OneKey',
+      name: 'VcWallet',
       icon: 'https://theme.zdassets.com/theme_assets/10237731/cd8f795ce97bdd7657dd4fb4b19fde3f32b50349.png',
       isEnabled: () => Promise.resolve(true),
-      enable: () => this.enable() 
-     }
+      enable: () => this.enable()
+    }
   }
 
   async enable() {
     const API = {
       getNetworkId: () => this.getNetworkId(),
-      getUtxos:  (amount?: Cbor, paginate?: Paginate) => this.getUtxos(amount, paginate),
+      getUtxos: (amount?: Cbor, paginate?: Paginate) => this.getUtxos(amount, paginate),
       getBalance: () => this.getBalance(),
       getUsedAddresses: () => this.getUsedAddresses(),
-      getUnusedAddresses: () => this.getUnUsedAddress(), 
+      getUnusedAddresses: () => this.getUnUsedAddress(),
 
       getChangeAddress: () => this.getChangeAddress(),
-    
+
       getRewardAddresses: () => this.getRewardAddresses(),
-    
+
       signTx: (tx: Cbor, partialSign?: boolean) => this.signTx(tx, partialSign),
-    
+
       signData: (addr: Cbor, payload: Bytes) => this.signData(addr, payload),
-    
+
       submitTx: (tx: Cbor) => this.submitTx(tx),
 
       experimental: {
@@ -203,10 +203,10 @@ class ProviderCardano extends ProviderCardanoBase implements IProviderCardano {
     if (!this.account) {
       const result = await this._callBridge({
         method: 'connect',
-        params: undefined 
+        params: undefined
       })
-      this._handleConnected(result.account, {emit: true})
-      return API 
+      this._handleConnected(result.account, { emit: true })
+      return API
     }
     return Promise.resolve(API)
   }
@@ -218,7 +218,7 @@ class ProviderCardano extends ProviderCardanoBase implements IProviderCardano {
       method: 'getNetworkId',
       params: undefined
     })
-	}
+  }
 
   async getUtxos(amount?: Cbor, paginate?: Paginate) {
     return this._callBridge({
@@ -317,4 +317,4 @@ class ProviderCardano extends ProviderCardanoBase implements IProviderCardano {
   }
 }
 
-export {ProviderCardano}
+export { ProviderCardano }

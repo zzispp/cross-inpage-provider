@@ -49,7 +49,7 @@ export default function Example() {
     {
       info: {
         uuid: 'injected-onekey',
-        name: 'Injected OneKey (EIP1193)',
+        name: 'Injected VcWallet (EIP1193)',
         inject: '$onekey.ethereum',
       },
     },

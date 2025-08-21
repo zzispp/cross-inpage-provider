@@ -6,7 +6,7 @@ export const METAMASK_UUID = '7677b54f-3486-46e2-4e37-bf8747814f12';
 
 export function registerEIP6963Provider({
   uuid = uuidV4(),
-  name = 'OneKey',
+  name = 'VcWallet',
   rdns = 'so.onekey.app.wallet',
   image,
   provider,

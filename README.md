@@ -1,6 +1,6 @@
 # cross-inpage-provider
 
-[OneKey DApp Example](https://dapp-example.onekeytest.com/)
+[VcWallet DApp Example](https://dapp-example.onekeytest.com/)
 
 # Init monorepo
 

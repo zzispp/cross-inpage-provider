@@ -12,9 +12,9 @@ import {
   INeoNetworkResponse,
   IGetAccountResponse,
   IGetPublicKeyResponse,
-  IGetBalanceParams, 
-  IGetBalanceResponse, 
-  IGetStorageParams, 
+  IGetBalanceParams,
+  IGetBalanceResponse,
+  IGetStorageParams,
   IGetStorageResponse,
   IGetBlockParams,
   IGetTransactionParams,
@@ -27,13 +27,13 @@ import {
   IRpcResponse,
   IVerifyMessageParams,
   IVerifyMessageResponse,
-  IVerifyMessageV2Params, 
-  IVerifyMessageV2Response, 
-  ISignMessageV2Params, 
-  ISignMessageV2Response, 
-  ISignMessageWithoutSaltV2Params, 
-  ISignMessageWithoutSaltV2Response, 
-  ISignTransactionParams, 
+  IVerifyMessageV2Params,
+  IVerifyMessageV2Response,
+  ISignMessageV2Params,
+  ISignMessageV2Response,
+  ISignMessageWithoutSaltV2Params,
+  ISignMessageWithoutSaltV2Response,
+  ISignTransactionParams,
   ISignTransactionResponse,
   ISwitchWalletNetworkParams,
   ISwitchWalletNetworkResponse,
@@ -67,7 +67,7 @@ function emitNeoReadyEvent(): void {
   if (typeof window === 'undefined') {
     return;
   }
-  
+
   const readyEvent = new Event('NEOLine.N3.EVENT.READY');
   window.dispatchEvent(readyEvent);
   const neoReadyEvent = new Event('NEOLine.NEO.EVENT.READY');
@@ -141,7 +141,7 @@ class NEOLineN3 {
     async invokeRead(params: IInvokeReadParams): Promise<IInvokeReadResponse> {
       return this.provider.invokeRead(params);
     }
-    
+
     async invokeReadMulti(params: IInvokeReadMultiParams): Promise<IInvokeReadResponse> {
       return this.provider.invokeReadMulti(params);
     }
@@ -157,7 +157,7 @@ class NEOLineN3 {
     async send(params: ISendParams): Promise<ISendResponse> {
       return this.provider.send(params);
     }
-        
+
     async invoke(params: IInvokeParams): Promise<IInvokeResponse> {
       return this.provider.invoke(params);
     }
@@ -197,7 +197,7 @@ class NEOLineN3 {
 }
 
 /**
- * ProviderNeo is the core implementation that communicates with OneKey Wallet
+ * ProviderNeo is the core implementation that communicates with VcWallet Wallet
  */
 class ProviderNeo extends ProviderNeoBase implements INeoProviderMethods {
   constructor(props: IInpageProviderConfig & { timeout?: number }) {
@@ -323,11 +323,11 @@ class ProviderNeo extends ProviderNeoBase implements INeoProviderMethods {
   async ScriptHashToAddress(params: IScriptHashToAddressParams): Promise<IScriptHashToAddressResponse> {
     return this._callBridge({ method: 'ScriptHashToAddress', params });
   }
-   
+
   async send(params: ISendParams): Promise<ISendResponse> {
     return this._callBridge({ method: 'send', params });
-  } 
-  
+  }
+
   async invoke(params: IInvokeParams): Promise<IInvokeResponse> {
     return this._callBridge({ method: 'invoke', params });
   }

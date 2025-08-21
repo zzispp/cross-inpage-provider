@@ -42,7 +42,7 @@ export class ProviderAlph extends InteractiveSignerProvider implements AlephiumW
   id = 'alephium';
   name = 'Alephium';
   // id = 'onekey';
-  // name = 'OneKey';
+  // name = 'VcWallet';
   icon = 'https://uni.onekey-asset.com/static/logo/onekey.png';
   version = '0.9.4';
   _accountInfo: Account | undefined;

@@ -20,7 +20,7 @@ export default {
     {
       id: 'signMessage',
       name: 'signMessage',
-      value: 'Hello OneKey',
+      value: 'Hello VcWallet',
     },
   ],
   signAndSendTransaction: (publicKey: string) => [
@@ -33,7 +33,7 @@ export default {
       }),
     },
   ],
-  signAndSendTokenTransaction: (publicKey: string) => 
+  signAndSendTokenTransaction: (publicKey: string) =>
     TOKEN_LIST.map(token => ({
       id: `signAndSendTokenTransaction_${token.symbol}`,
       name: `Send ${token.symbol} Token`,

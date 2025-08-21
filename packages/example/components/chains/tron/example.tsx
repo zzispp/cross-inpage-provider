@@ -107,7 +107,7 @@ export default function Example() {
     },
     {
       uuid: 'injected-onekey',
-      name: 'Injected OneKey',
+      name: 'Injected VcWallet',
       inject: '$onekey.tron',
     },
   ]);

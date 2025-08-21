@@ -158,13 +158,13 @@ class ProviderTron extends ProviderTronBase implements IProviderTron {
 
       if (window.tronWeb !== undefined) {
         this._log.warn(
-          'OneKey: TronWeb is already initiated. Onekey will overwrite the current instance',
+          'VcWallet: TronWeb is already initiated. Onekey will overwrite the current instance',
         );
       }
 
       if (window.sunWeb !== undefined) {
         this._log.warn(
-          'OneKey: TronWeb is already initiated. Onekey will overwrite the current instance',
+          'VcWallet: TronWeb is already initiated. Onekey will overwrite the current instance',
         );
       }
 
@@ -181,7 +181,7 @@ class ProviderTron extends ProviderTronBase implements IProviderTron {
         get() {
           if (!self._connected) {
             self._log.warn(
-              'OneKey: We recommend that DApp developers use $onekey.tron.request({method: "tron_requestAccounts"}) to request users’ account information at the earliest time possible in order to get a complete TronWeb injection.',
+              'VcWallet: We recommend that DApp developers use $onekey.tron.request({method: "tron_requestAccounts"}) to request users’ account information at the earliest time possible in order to get a complete TronWeb injection.',
             );
 
             const origin = globalWindow?.location?.origin || '';
@@ -238,7 +238,7 @@ class ProviderTron extends ProviderTronBase implements IProviderTron {
       this._dispatch('tronLink#initialized');
       this._initialized = true;
     } catch (error) {
-      this._log.error('OneKey: Failed to get initial state. Please report this bug.', error);
+      this._log.error('VcWallet: Failed to get initial state. Please report this bug.', error);
     }
   }
 

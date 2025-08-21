@@ -85,7 +85,7 @@ export class AptosStandardProvider implements AptosWallet {
 
   readonly version = '1.0.0';
 
-  readonly name: string = 'OneKey';
+  readonly name: string = 'VcWallet';
 
   icon: WalletIcon = 'data:image/svg+xml;base64,';
   provider: ProviderAptos;

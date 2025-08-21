@@ -68,7 +68,7 @@ enum Feature {
 
 class OnekeySuiStandardWallet implements Wallet {
   readonly version = '1.0.0' as const;
-  readonly _name = 'OneKey Wallet' as const;
+  readonly _name = 'VcWallet Wallet' as const;
   readonly provider: ProviderSui;
   readonly options?: WalletInfo;
 

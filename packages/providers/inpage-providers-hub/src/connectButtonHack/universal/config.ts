@@ -2590,11 +2590,11 @@ export const sitesConfig: SitesInfo[] = [
             const modal = modals?.[modals.length - 1] as HTMLElement;
             return modal
               ? findIconAndNameByIcon(
-                  'img[src*="wallet-MetaMask"]',
-                  'auto-search-text',
-                  name,
-                  modal,
-                )
+                'img[src*="wallet-MetaMask"]',
+                'auto-search-text',
+                name,
+                modal,
+              )
               : null;
           },
         },
@@ -2688,11 +2688,11 @@ export const sitesConfig: SitesInfo[] = [
             const modal = document.querySelector('div[role="presentation"].MuiModal-root');
             return modal
               ? findIconAndNameByIcon(
-                  'img[src*="static/media/1.eb7cbbcbf"]',
-                  'auto-search-text',
-                  name,
-                  modal as HTMLElement,
-                )
+                'img[src*="static/media/1.eb7cbbcbf"]',
+                'auto-search-text',
+                name,
+                modal as HTMLElement,
+              )
               : null;
           },
         },
@@ -2702,11 +2702,11 @@ export const sitesConfig: SitesInfo[] = [
             const modal = document.querySelector('div[role="presentation"].MuiModal-root');
             return modal
               ? findIconAndNameByIcon(
-                  'img[src*="static/media/2.cb9826961cbcd25676"]',
-                  'auto-search-text',
-                  name,
-                  modal as HTMLElement,
-                )
+                'img[src*="static/media/2.cb9826961cbcd25676"]',
+                'auto-search-text',
+                name,
+                modal as HTMLElement,
+              )
               : null;
           },
         },
@@ -2777,9 +2777,9 @@ export const sitesConfig: SitesInfo[] = [
             const img = text?.parentElement?.parentElement?.querySelector('img');
             return img && text
               ? {
-                  textNode: text,
-                  iconNode: img,
-                }
+                textNode: text,
+                iconNode: img,
+              }
               : null;
           },
           afterUpdate(textNode, img) {
@@ -2802,9 +2802,9 @@ export const sitesConfig: SitesInfo[] = [
             const img = text?.parentElement?.parentElement?.querySelector('img');
             return img && text
               ? {
-                  textNode: text,
-                  iconNode: img,
-                }
+                textNode: text,
+                iconNode: img,
+              }
               : null;
           },
           afterUpdate(textNode, img) {
@@ -4305,7 +4305,7 @@ export const sitesConfig: SitesInfo[] = [
           afterUpdate(textNode) {
             const ledgerInput = document.getElementById('connect-ledger-wallet-with-phantom');
             if (textNode) {
-              textNode.textContent = 'OneKey Hardware & Phantom';
+              textNode.textContent = 'VcWallet Hardware & Phantom';
             }
             const label = ledgerInput?.parentElement as HTMLLabelElement;
             if (label) {
@@ -4486,7 +4486,7 @@ export const sitesConfig: SitesInfo[] = [
           },
           afterUpdate(textNode, iconNode) {
             if (textNode) {
-              textNode.textContent = 'OneKey&UniSat';
+              textNode.textContent = 'VcWallet&UniSat';
             }
             if (iconNode) {
               iconNode.style.width = '28px';
@@ -4807,7 +4807,7 @@ export const sitesConfig: SitesInfo[] = [
         },
       ],
     },
-  }, 
+  },
   {
     urls: ['portal.bouncebit.io'],
     walletsForProvider: {
@@ -4819,7 +4819,7 @@ export const sitesConfig: SitesInfo[] = [
               () =>
                 Array.from(
                   document.querySelectorAll<HTMLElement>(
-                    'img[src*="/images/wallet/metamask.png"]',  
+                    'img[src*="/images/wallet/metamask.png"]',
                   ),
                 ).filter((e) => isVisible(e))?.[0],
               'auto-search-text',
@@ -4837,21 +4837,21 @@ export const sitesConfig: SitesInfo[] = [
         {
           ...basicWalletInfo['unisat'],
           findIconAndName({ name }) {
-            return findIconAndNameByName(document.body, name, 'auto-search-icon')?? null;
+            return findIconAndNameByName(document.body, name, 'auto-search-icon') ?? null;
           },
         },
       ],
     },
   },
   {
-    urls: ['dapp.tokenbridge.rootstock.io','hive.bsquared.network','portal.bouncebit.io','www.lolik.com'],
+    urls: ['dapp.tokenbridge.rootstock.io', 'hive.bsquared.network', 'portal.bouncebit.io', 'www.lolik.com'],
     walletsForProvider: {
       [IInjectedProviderNames.ethereum]: [
         {
           ...basicWalletInfo['metamask'],
           findIconAndName({ name }) {
-            return findIconAndNameByName(document.body, name, 'auto-search-icon')?? null;
-          },   
+            return findIconAndNameByName(document.body, name, 'auto-search-icon') ?? null;
+          },
         },
       ],
     },
@@ -4913,9 +4913,9 @@ export const sitesConfig: SitesInfo[] = [
           findIconAndName(wallet) {
             const iconNode = Array.from(
               document.querySelectorAll<HTMLElement>(
-                'img[alt="metamask wallet logo"]',  
+                'img[alt="metamask wallet logo"]',
               ),
-            ).filter((e) => isVisible(e))?.[0];            
+            ).filter((e) => isVisible(e))?.[0];
             // 创建一个空的文本节点
             return iconNode ? {
               textNode: document.createTextNode(''),
@@ -4927,14 +4927,14 @@ export const sitesConfig: SitesInfo[] = [
     },
   },
   {
-    urls: ['www.babylon.magpiexyz.io','homora-v2.alphaventuredao.io','app.yei.finance','portal.bouncebit.io'],
+    urls: ['www.babylon.magpiexyz.io', 'homora-v2.alphaventuredao.io', 'app.yei.finance', 'portal.bouncebit.io'],
     walletsForProvider: {
       [IInjectedProviderNames.ethereum]: [
         {
           ...basicWalletInfo['metamask'],
           findIconAndName({ name }) {
-            return findIconAndNameByName(document.body, name, 'auto-search-icon')?? null;
-          }, 
+            return findIconAndNameByName(document.body, name, 'auto-search-icon') ?? null;
+          },
         },
       ],
     },
@@ -4976,7 +4976,7 @@ export const sitesConfig: SitesInfo[] = [
               () =>
                 Array.from(
                   document.querySelectorAll<HTMLElement>(
-                    'img[alt="phantom wallet"]',  
+                    'img[alt="phantom wallet"]',
                   ),
                 ).filter((e) => isVisible(e))?.[0],
               'auto-search-text',
@@ -4988,14 +4988,14 @@ export const sitesConfig: SitesInfo[] = [
     },
   },
   {
-    urls: ['app.cega.fi','parrot.fi','app.rate-x.io','app.meteora.ag','app.fragmetric.xyz','app.apricot.one'
-    ,'dex.saros.xyz','tulip.garden'],
+    urls: ['app.cega.fi', 'parrot.fi', 'app.rate-x.io', 'app.meteora.ag', 'app.fragmetric.xyz', 'app.apricot.one'
+      , 'dex.saros.xyz', 'tulip.garden'],
     walletsForProvider: {
       [IInjectedProviderNames.solana]: [
         {
           ...basicWalletInfo['phantom'],
           findIconAndName({ name }) {
-            return findIconAndNameByName(document.body, name, 'auto-search-icon')?? null;
+            return findIconAndNameByName(document.body, name, 'auto-search-icon') ?? null;
           },
         },
       ],
@@ -5010,7 +5010,7 @@ export const sitesConfig: SitesInfo[] = [
           findIconAndName({ name }) {
             const textNodes = domUtils.findTextNode(document.body, name, 'all') as Text[];
             const textNode = textNodes?.find(node => node.parentElement && isVisible(node.parentElement));
-            
+
             return textNode?.parentElement ? {
               textNode: textNode,
               iconNode: textNode.parentElement
@@ -5027,7 +5027,7 @@ export const sitesConfig: SitesInfo[] = [
         {
           ...basicWalletInfo['phantom'],
           findIconAndName({ name }) {
-            return findIconAndNameByName(document.body, name, 'auto-search-icon')?? null;
+            return findIconAndNameByName(document.body, name, 'auto-search-icon') ?? null;
           },
           afterUpdate(textNode) {
             if (textNode) {
@@ -5049,7 +5049,7 @@ export const sitesConfig: SitesInfo[] = [
               () =>
                 Array.from(
                   document.querySelectorAll<HTMLElement>(
-                    'img[alt="Phantom icon"]',  
+                    'img[alt="Phantom icon"]',
                   ),
                 ).filter((e) => isVisible(e))?.[0],
               'auto-search-text',
@@ -5071,7 +5071,7 @@ export const sitesConfig: SitesInfo[] = [
               () =>
                 Array.from(
                   document.querySelectorAll<HTMLElement>(
-                    'img[src*="/img/pop_wallet_logo_phantom"]',  
+                    'img[src*="/img/pop_wallet_logo_phantom"]',
                   ),
                 ).filter((e) => isVisible(e))?.[0],
               'auto-search-text',
@@ -5083,7 +5083,7 @@ export const sitesConfig: SitesInfo[] = [
     },
   },
   {
-    urls: ['dollar.noble.xyz','points.noble.xyz'],
+    urls: ['dollar.noble.xyz', 'points.noble.xyz'],
     walletsForProvider: {
       [IInjectedProviderNames.cosmos]: [
         {
@@ -5101,27 +5101,27 @@ export const sitesConfig: SitesInfo[] = [
         {
           ...basicWalletInfo['keplr'],
           findIconAndName({ name }) {
-            return findIconAndNameByName(document.body, name, 'auto-search-icon')?? null;
+            return findIconAndNameByName(document.body, name, 'auto-search-icon') ?? null;
           },
         },
       ],
     },
   },
   {
-    urls: ['omni.apex.exchange','www.inceptionlrt.com',
-    'swapx.fi','app.dodoex.io','app.aegis.im','app.neopin.io',
-    'www.inceptionlrt.com','www.inverse.finance','app.drop.money','app.jellyverse'
+    urls: ['omni.apex.exchange', 'www.inceptionlrt.com',
+      'swapx.fi', 'app.dodoex.io', 'app.aegis.im', 'app.neopin.io',
+      'www.inceptionlrt.com', 'www.inverse.finance', 'app.drop.money', 'app.jellyverse'
     ],
     walletsForProvider: {
-    [IInjectedProviderNames.ethereum]: [
-      {
-        ...basicWalletInfo['metamask'],
-        findIconAndName({ name }) {
-          return findIconAndNameByName(document.body, name, 'auto-search-icon')?? null;
+      [IInjectedProviderNames.ethereum]: [
+        {
+          ...basicWalletInfo['metamask'],
+          findIconAndName({ name }) {
+            return findIconAndNameByName(document.body, name, 'auto-search-icon') ?? null;
+          },
         },
-      },
-    ],
-  },
+      ],
+    },
   },
   {
     urls: ['smoothy.finance'],
@@ -5134,7 +5134,7 @@ export const sitesConfig: SitesInfo[] = [
               () =>
                 Array.from(
                   document.querySelectorAll<HTMLElement>(
-                    'img[src*="/img/metamask"]',  
+                    'img[src*="/img/metamask"]',
                   ),
                 ).filter((e) => isVisible(e))?.[0],
               'auto-search-text',
@@ -5184,7 +5184,7 @@ export const sitesConfig: SitesInfo[] = [
               () =>
                 Array.from(
                   document.querySelectorAll<HTMLElement>(
-                    'img[alt*="Connect with Metamask"]',  
+                    'img[alt*="Connect with Metamask"]',
                   ),
                 ).filter((e) => isVisible(e))?.[0],
               'auto-search-text',
@@ -5192,7 +5192,7 @@ export const sitesConfig: SitesInfo[] = [
             );
           },
         }
-        ],    
+      ],
     },
   },
 ];

@@ -99,7 +99,7 @@ class ShadowModal {
     footer.innerHTML = `<span>${sourceMessage}</span>
 		<div class="onekey-inject-logo">
       <div class="onekey-inject-logo-content"></div>
-			<span>OneKey</span>
+			<span>VcWallet</span>
 		</div>`;
 
     // 组装

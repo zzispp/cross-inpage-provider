@@ -197,7 +197,7 @@ text-align: center;
     //    action__connect_onekey_extension
     //    action__connect_onekey
     btn.innerHTML = `
-    <span>Connect OneKey</span>
+    <span>Connect VcWallet</span>
     <span class='onekey-spinner-element' style='
     display: none;
     vertical-align: middle;

@@ -27,7 +27,7 @@ export default function Example() {
     },
     {
       uuid: 'injected-onekey',
-      name: 'Injected OneKey',
+      name: 'Injected VcWallet',
       inject: '$onekey.solana',
     },
     {
@@ -167,7 +167,7 @@ export default function Example() {
             } = JSON.parse(result);
 
             let signatureObj;
-            if(Array.isArray(signature)) {
+            if (Array.isArray(signature)) {
               signatureObj = new Uint8Array(signature)
             } else {
               signatureObj = new Uint8Array(signature.data)
@@ -182,9 +182,9 @@ export default function Example() {
             return Promise.resolve(isValidSignature.toString());
           }}
         />
-          <ApiPayload
+        <ApiPayload
           title="solSignOffchainMessage"
-          description="签名消息(OneKey 私有方法)"
+          description="签名消息(VcWallet 私有方法)"
           presupposeParams={params.signMessage}
           onExecute={async (request: string) => {
             return await provider?.solSignOffchainMessage(Buffer.from(request, 'utf8'));
@@ -200,7 +200,7 @@ export default function Example() {
             } = JSON.parse(result);
 
             let signatureObj;
-            if(Array.isArray(signature)) {
+            if (Array.isArray(signature)) {
               signatureObj = new Uint8Array(signature)
             } else {
               signatureObj = new Uint8Array(signature.data)
@@ -267,7 +267,7 @@ export default function Example() {
               amount,
             );
             const res = await provider?.signTransaction(transafe);
-            if(hasVersionedTx(res)) {
+            if (hasVersionedTx(res)) {
               return 'error: Tx is Versioned Transaction';
             }
             return Buffer.from(res.serialize()).toString('hex')
@@ -309,7 +309,7 @@ export default function Example() {
             );
             const res = await provider?.signTransaction(transafe);
 
-            if(!hasVersionedTx(res)) {
+            if (!hasVersionedTx(res)) {
               return 'error: Tx is legacy Transaction';
             }
 
@@ -349,7 +349,7 @@ export default function Example() {
             console.log('transfer', transfer);
             const res = await provider?.signTransaction(transfer);
             console.log('res', res);
-            if(!hasVersionedTx(res)) {
+            if (!hasVersionedTx(res)) {
               return 'error:Tx is legacy Transaction';
             }
             return Buffer.from(res.serialize()).toString('hex');

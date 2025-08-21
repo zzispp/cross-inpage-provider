@@ -35,7 +35,7 @@ export enum TransactionPayloadType {
   MULTISIG = 4, // V2 SDK MultiSig Params
 }
 
-// OneKey Primitive Types
+// VcWallet Primitive Types
 export enum ArgumentType {
   NULL = 10000,
   UNDEFINED = 10001,
@@ -107,10 +107,10 @@ export function serializeTransactionPayload(
   }
 
   const serializer = new Serializer();
- if ('function' in args && 'functionArguments' in args && !('multisigAddress' in args)) {
+  if ('function' in args && 'functionArguments' in args && !('multisigAddress' in args)) {
     // V2 SDK Entry Function Params
     serializeTransactionPayloadEntryFunction(args, serializer);
-  } else if('function' in args && 'functionArguments' in args && 'multisigAddress' in args) {
+  } else if ('function' in args && 'functionArguments' in args && 'multisigAddress' in args) {
     // V2 SDK MultiSig Params
     // @ts-expect-error
     serializeTransactionPayloadMultiSig(args, serializer);
@@ -462,15 +462,15 @@ function serializeTransactionPayloadMultiSig(args: InputMultiSigData, serializer
   const { multisigAddress, function: functionName, typeArguments, functionArguments } = args;
   serializer.serializeU32AsUleb128(TransactionPayloadType.MULTISIG);
 
-  if(typeof multisigAddress === 'string') {
+  if (typeof multisigAddress === 'string') {
     serializer.serializeU8(0);
     serializer.serializeOption(multisigAddress);
-  } else if(multisigAddress instanceof AccountAddress) {
+  } else if (multisigAddress instanceof AccountAddress) {
     serializer.serializeU8(1);
     const multisigAddressSerializer = new Serializer();
     multisigAddress.serialize(multisigAddressSerializer);
     serializer.serializeOption(multisigAddressSerializer.toUint8Array());
-  } else if(multisigAddress instanceof Uint8Array) {
+  } else if (multisigAddress instanceof Uint8Array) {
     serializer.serializeU8(2);
     serializer.serializeOption(multisigAddress);
   } else {
@@ -485,12 +485,12 @@ function serializeTransactionPayloadMultiSig(args: InputMultiSigData, serializer
 function deserializeTransactionPayloadMultiSig(deserializer: Deserializer): InputMultiSigData {
   const multisigAddressType = deserializer.deserializeU8();
   let multisigAddress: AccountAddressInput;
-  if(multisigAddressType === 0) {
+  if (multisigAddressType === 0) {
     multisigAddress = deserializer.deserializeOption('string') ?? '';
-  } else if(multisigAddressType === 1) {
+  } else if (multisigAddressType === 1) {
     const bytes = deserializer.deserializeBytes();
     multisigAddress = AccountAddress.deserialize(new Deserializer(bytes));
-  } else if(multisigAddressType === 2) {
+  } else if (multisigAddressType === 2) {
     multisigAddress = deserializer.deserializeOption('bytes') ?? new Uint8Array();
   } else {
     throw new Error('Invalid multisig address type');

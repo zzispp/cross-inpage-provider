@@ -1,6 +1,6 @@
 {
 	"name": "@zzispp/onekey-cross-webview",
-	"version": "2.2.39",
+	"version": "2.2.40",
 	"keywords": [
 		"cross-inpage-provider"
 	],
@@ -35,7 +35,7 @@
 		"react-native-webview": "^11.17.2"
 	},
 	"dependencies": {
-		"@zzispp/cross-inpage-provider-core": "2.2.39",
-		"@zzispp/cross-inpage-provider-types": "2.2.39"
+		"@zzispp/cross-inpage-provider-core": "2.2.40",
+		"@zzispp/cross-inpage-provider-types": "2.2.40"
 	}
 }

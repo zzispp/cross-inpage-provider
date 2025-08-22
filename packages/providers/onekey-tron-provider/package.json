@@ -1,6 +1,6 @@
 {
   "name": "@zzispp/onekey-tron-provider",
-  "version": "2.2.39",
+  "version": "2.2.40",
   "keywords": [
     "cross-inpage-provider"
   ],
@@ -28,10 +28,10 @@
   },
   "dependencies": {
     "@noble/secp256k1": "1.7.1",
-    "@zzispp/cross-inpage-provider-core": "2.2.39",
-    "@zzispp/cross-inpage-provider-errors": "2.2.39",
-    "@zzispp/cross-inpage-provider-types": "2.2.39",
-    "@zzispp/extension-bridge-injected": "2.2.39",
+    "@zzispp/cross-inpage-provider-core": "2.2.40",
+    "@zzispp/cross-inpage-provider-errors": "2.2.40",
+    "@zzispp/cross-inpage-provider-types": "2.2.40",
+    "@zzispp/extension-bridge-injected": "2.2.40",
     "lodash-es": "^4.17.21",
     "querystring": "^0.2.1",
     "sunweb": "^1.0.7",

@@ -1,6 +1,6 @@
 {
   "name": "@zzispp/onekey-algo-provider",
-  "version": "2.2.39",
+  "version": "2.2.40",
   "keywords": [
     "cross-inpage-provider"
   ],
@@ -27,9 +27,9 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@zzispp/cross-inpage-provider-core": "2.2.39",
-    "@zzispp/cross-inpage-provider-errors": "2.2.39",
-    "@zzispp/cross-inpage-provider-types": "2.2.39",
-    "@zzispp/extension-bridge-injected": "2.2.39"
+    "@zzispp/cross-inpage-provider-core": "2.2.40",
+    "@zzispp/cross-inpage-provider-errors": "2.2.40",
+    "@zzispp/cross-inpage-provider-types": "2.2.40",
+    "@zzispp/extension-bridge-injected": "2.2.40"
   }
 }

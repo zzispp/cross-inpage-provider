@@ -1,6 +1,6 @@
 {
   "name": "@zzispp/cross-inpage-provider-injected",
-  "version": "2.2.39",
+  "version": "2.2.40",
   "keywords": [
     "cross-inpage-provider"
   ],
@@ -46,12 +46,12 @@
     "electron": "*"
   },
   "dependencies": {
-    "@zzispp/cross-inpage-provider-core": "2.2.39",
-    "@zzispp/cross-inpage-provider-types": "2.2.39",
-    "@zzispp/desktop-bridge-injected": "2.2.39",
-    "@zzispp/extension-bridge-injected": "2.2.39",
-    "@zzispp/inpage-providers-hub": "2.2.39",
-    "@zzispp/native-bridge-injected": "2.2.39",
+    "@zzispp/cross-inpage-provider-core": "2.2.40",
+    "@zzispp/cross-inpage-provider-types": "2.2.40",
+    "@zzispp/desktop-bridge-injected": "2.2.40",
+    "@zzispp/extension-bridge-injected": "2.2.40",
+    "@zzispp/inpage-providers-hub": "2.2.40",
+    "@zzispp/native-bridge-injected": "2.2.40",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0"
   }
